@@ -7,3 +7,43 @@
 img {
     width: 100%;
 }
+
+.slider-container {
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.slider-carousel {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.images {
+    padding: 10px;
+}
+
+.circles {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 999px;
+}
+
+.circle {
+    color: white;
+    padding:0 10px;
+    
+}
+
+.circle.active {
+    color: darkblue;
+}

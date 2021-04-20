@@ -13,20 +13,30 @@
     <div id="root">
         
         <div class="slider-container">
+            <div class="slider-carousel">
+                
+                <div class="arrow" @click="prevPhoto">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+        
+                <div class="images">
+                    <img :src="carouselImages[activeImage]" alt="">
+                </div>
+        
+                <div class="arrow" @click="nextPhoto">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+
+            </div>
             
-            <div class="arrow">
-                <i class="fas fa-chevron-left"></i>
+            <div class="circles">
+                <span v-for="(image, index) in carouselImages" class="circle" :class="{ 'active': index == activeImage }">
+                    <i class="fas fa-circle"></i>
+                </span>
+                
             </div>
-    
-            <div class="images">
-    
-            </div>
-    
-            <div class="arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            
         </div>
+        
         
         
     </div>
